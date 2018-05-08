@@ -1,6 +1,8 @@
 <template>
 	<div class="create">
+		<br>
 		<input v-model="todoInput"
+			style="width:30%;height:25px;margin-bottom:20px;padding-left:10px;font-size:15px;"
 			id="todoInput"
   			placeholder="What's on your list?">
 		<div @click="onCreate">Create</div>
