@@ -1,6 +1,8 @@
 <template>
 	<div class="create">
-		Implement code to create an entry (Add inputs then post to the endpoints)
+		<input v-model="todoInput"
+			id="todoInput"
+  			placeholder="What's on your list?">
 		<div @click="onCreate">Create</div>
 	</div>
 </template>
@@ -15,9 +17,8 @@ export default {
 
 	methods:{
 		onCreate(){
-			// Post data
 
-			this.axios.post("https://arfkcpx7m7.execute-api.us-east-1.amazonaws.com/dev/todos", {text:"toto"}).then((response) => {
+			this.axios.post("https://arfkcpx7m7.execute-api.us-east-1.amazonaws.com/dev/todos", {text:this.todoInput}).then((response) => {
 			
 			  this.$router.push('/List')
 		
@@ -28,6 +29,7 @@ export default {
 	data(){
 		return{
 			id:null,
+			todoInput: ''
 		}
 	}
 }
