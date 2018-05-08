@@ -16,13 +16,9 @@ export default {
 
 	mounted(){
 
-
 		this.axios.get("https://arfkcpx7m7.execute-api.us-east-1.amazonaws.com/dev/todos").then((response) => {
-			
 		  this.todos = response.data;
-	
 		})
-
 		
 	},
 

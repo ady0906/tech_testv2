@@ -5,7 +5,7 @@
 			style="width:30%;height:25px;margin-bottom:20px;padding-left:10px;font-size:15px;"
 			id="todoInput"
   			placeholder="What's on your list?">
-		<div @click="onCreate">Create</div>
+		<div style="cursor:pointer;" @click="onCreate">Create</div>
 	</div>
 </template>
 
@@ -21,9 +21,7 @@ export default {
 		onCreate(){
 
 			this.axios.post("https://arfkcpx7m7.execute-api.us-east-1.amazonaws.com/dev/todos", {text:this.todoInput}).then((response) => {
-			
 			  this.$router.push('/List')
-		
 			})
 		}
 	},

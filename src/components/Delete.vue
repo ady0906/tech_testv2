@@ -1,7 +1,7 @@
 <template>
-	<div class="delete">
-		Implement code to delete this entry {{this.id}}
-		<div @click="onDelete">Delete</div>
+	<div style="padding-top:20px;" class="delete">
+		Delete the entry <strong>{{this.id}}</strong> ?
+		<div style="cursor:pointer;margin-top:20px;color:red;" @click="onDelete">Delete</div>
 	</div>
 </template>
 
