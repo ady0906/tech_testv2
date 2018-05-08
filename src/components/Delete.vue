@@ -15,7 +15,13 @@ export default {
 
 	methods:{
 		onDelete(){
+			var targetUrl = "https://arfkcpx7m7.execute-api.us-east-1.amazonaws.com/dev/todos/" + this.id;
 			
+			this.axios.delete(targetUrl, {id:this.id}).then((response) => {
+			
+			  this.$router.push('/List')
+		
+			})
 		}
 	},
 
